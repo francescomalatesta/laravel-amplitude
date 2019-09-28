@@ -5,6 +5,8 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/francescomalatesta/laravel-amplitude/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/francescomalatesta/laravel-amplitude/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/francescomalatesta/laravel-amplitude.svg?style=flat-square)](https://packagist.org/packages/francescomalatesta/laravel-amplitude)
 
+![](laravel-amplitude.png)
+
 This package will be your best friend if you need to track events for your Laravel application in Amplitude.
 
 This package is compatible with the 5.8 version of Laravel.
