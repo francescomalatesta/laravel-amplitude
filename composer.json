@@ -1,0 +1,57 @@
+{
+    "name": "francescomalatesta/laravel-amplitude",
+    "description": "A Laravel wrapper for the zumba/amplitude-php package.",
+    "keywords": [
+        "laravel",
+        "amplitude",
+        "package",
+        "php"
+    ],
+    "homepage": "https://github.com/francescomalatesta/laravel-amplitude",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Francesco Malatesta",
+            "email": "francesco@ahia.store",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*",
+        "zumba/amplitude-php": "^1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelAmplitude\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelAmplitude\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelAmplitude\\Providers\\LaravelAmplitudeServiceProvider"
+            ],
+            "aliases": {
+                "Amplitude": "LaravelAmplitude\\Facades\\AmplitudeFacade"
+            }
+        }
+    }
+}
