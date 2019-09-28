@@ -2,6 +2,6 @@
 
 All notable changes to `laravel-amplitude` will be documented in this file
 
-## 1.0.0 - 201X-XX-XX
+## 0.1.0 - September 28, 2019
 
-- initial release
+- Initial release.
