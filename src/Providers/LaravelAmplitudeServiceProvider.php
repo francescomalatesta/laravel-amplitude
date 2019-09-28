@@ -17,7 +17,7 @@ class LaravelAmplitudeServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/amplitude.php' => config_path('amplitude.php'),
+            __DIR__ . '/../../config/amplitude.php' => config_path('amplitude.php'),
         ]);
     }
 
