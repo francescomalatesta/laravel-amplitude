@@ -50,7 +50,7 @@
                 "LaravelAmplitude\\Providers\\LaravelAmplitudeServiceProvider"
             ],
             "aliases": {
-                "Amplitude": "LaravelAmplitude\\Facades\\AmplitudeFacade"
+                "Amplitude": "LaravelAmplitude\\Facades\\Amplitude"
             }
         }
     }
