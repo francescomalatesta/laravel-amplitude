@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/francescomalatesta/laravel-amplitude.svg?style=flat-square)](https://packagist.org/packages/francescomalatesta/laravel-amplitude)
 [![Build Status](https://img.shields.io/travis/francescomalatesta/laravel-amplitude/master.svg?style=flat-square)](https://travis-ci.org/francescomalatesta/laravel-amplitude)
-[![Quality Score](https://img.shields.io/scrutinizer/g/francescomalatesta/laravel-amplitude.svg?style=flat-square)](https://scrutinizer-ci.com/g/francescomalatesta/laravel-amplitude)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/francescomalatesta/laravel-amplitude/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/francescomalatesta/laravel-amplitude/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/francescomalatesta/laravel-amplitude.svg?style=flat-square)](https://packagist.org/packages/francescomalatesta/laravel-amplitude)
 
 This package will be your best friend if you need to track events for your Laravel application in Amplitude.
