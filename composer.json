@@ -1,6 +1,6 @@
 {
     "name": "francescomalatesta/laravel-amplitude",
-    "description": "A Laravel wrapper for the zumba/amplitude-php package.",
+    "description": "A Laravel package to work with Amplitude.",
     "keywords": [
         "laravel",
         "amplitude",
