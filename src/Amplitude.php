@@ -38,4 +38,14 @@ class Amplitude
     {
         $this->driver->sendEvent($name, $properties);
     }
+
+    public function queueEvent($name, $properties = [])
+    {
+        $this->driver->queueEvent($name, $properties);
+    }
+
+    public function sendQueuedEvents()
+    {
+        $this->driver->sendQueuedEvents();
+    }
 }

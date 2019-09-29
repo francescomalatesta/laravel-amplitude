@@ -85,4 +85,27 @@ class AmplitudeTest extends TestCase
 
         $this->amplitude->sendEvent('name');
     }
+
+    /**
+     * @test
+     */
+    public function it_should_queue_event()
+    {
+        $this->driver->expects(self::once())
+            ->method('queueEvent')
+            ->with('name', []);
+
+        $this->amplitude->queueEvent('name');
+    }
+
+    /**
+     * @test
+     */
+    public function it_should_send_previously_queued_events()
+    {
+        $this->driver->expects(self::once())
+            ->method('sendQueuedEvents');
+
+        $this->amplitude->sendQueuedEvents();
+    }
 }
