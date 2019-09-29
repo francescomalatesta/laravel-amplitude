@@ -70,4 +70,27 @@ class AmplitudeDriverTest extends TestCase
 
         $this->driver->sendEvent('MYEVENT', ['param' => 'value', 'param2' => [1, 2, 3], 'param3' => ['x' => 1, 'y' => 2]]);
     }
+
+    /**
+     * @test
+     */
+    public function it_should_queue_event()
+    {
+        $this->amplitude->expects(self::once())
+            ->method('queueEvent')
+            ->with('MYEVENT', []);
+
+        $this->driver->queueEvent('MYEVENT', []);
+    }
+
+    /**
+     * @test
+     */
+    public function it_should_send_queued_events()
+    {
+        $this->amplitude->expects(self::once())
+            ->method('logQueuedEvents');
+
+        $this->driver->sendQueuedEvents();
+    }
 }

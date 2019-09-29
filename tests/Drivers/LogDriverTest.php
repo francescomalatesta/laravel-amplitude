@@ -68,4 +68,28 @@ class LogDriverTest extends TestCase
 
         $this->driver->sendEvent('MYEVENT', ['param' => 'value', 'param2' => [1, 2, 3], 'param3' => ['x' => 1, 'y' => 2]]);
     }
+
+    /**
+     * @test
+     */
+    public function it_should_log_event_queueing()
+    {
+        $this->logger->expects(self::once())
+            ->method('info')
+            ->with('Laravel Amplitude - Event Queued - MYEVENT - Properties: {"param":"value","param2":[1,2,3],"param3":{"x":1,"y":2}}');
+
+        $this->driver->queueEvent('MYEVENT', ['param' => 'value', 'param2' => [1, 2, 3], 'param3' => ['x' => 1, 'y' => 2]]);
+    }
+
+    /**
+     * @test
+     */
+    public function it_should_log_queued_events_sending()
+    {
+        $this->logger->expects(self::once())
+            ->method('info')
+            ->with('Laravel Amplitude - Sent all previously queued events');
+
+        $this->driver->sendQueuedEvents();
+    }
 }

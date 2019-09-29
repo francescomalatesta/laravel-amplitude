@@ -26,6 +26,16 @@ class NullDriver implements AmplitudeDriverInterface
         return;
     }
 
+    public function queueEvent($name, $properties)
+    {
+        return;
+    }
+
+    public function sendQueuedEvents()
+    {
+        return;
+    }
+
     public function getDriverName()
     {
         return 'null';

@@ -42,6 +42,16 @@ class AmplitudeDriver implements AmplitudeDriverInterface
         );
     }
 
+    public function queueEvent($name, $properties)
+    {
+        $this->instance->queueEvent($name, $properties);
+    }
+
+    public function sendQueuedEvents()
+    {
+        $this->instance->logQueuedEvents();
+    }
+
     public function getDriverName()
     {
         return 'amplitude';
