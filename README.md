@@ -109,6 +109,10 @@ Amplitude::queueEvent('subscription_paid', ['was_trial' => true]);
 Amplitude::sendQueuedEvents();
 ```
 
+### Use Service instead of Facade
+
+If you don't like to use Facades, you can inject the `LaravelAmplitude\Amplitude` service directly in your code wherever you want.
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
