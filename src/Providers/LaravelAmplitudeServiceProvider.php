@@ -2,12 +2,16 @@
 
 namespace LaravelAmplitude\Providers;
 
+use Illuminate\Console\Events\CommandFinished;
+use Illuminate\Events\Dispatcher;
+use Illuminate\Foundation\Http\Events\RequestHandled;
 use Illuminate\Support\ServiceProvider;
 use LaravelAmplitude\Amplitude;
 use LaravelAmplitude\AmplitudeFactory;
 use LaravelAmplitude\Drivers\AmplitudeDriver;
 use LaravelAmplitude\Drivers\LogDriver;
 use LaravelAmplitude\Drivers\NullDriver;
+use LaravelAmplitude\Events\SendQueuedEvents;
 
 class LaravelAmplitudeServiceProvider extends ServiceProvider
 {
@@ -37,6 +41,18 @@ class LaravelAmplitudeServiceProvider extends ServiceProvider
             ]);
 
             return $factory->makeFor(config('amplitude.driver'));
+        });
+
+        /** @var Dispatcher $eventDispatcher */
+        $eventDispatcher = app()->make(Dispatcher::class);
+        $eventDispatcher->listen(SendQueuedEvents::class, function() {
+            /** @var Amplitude $amplitude */
+            $amplitude = app()->make(Amplitude::class);
+            $amplitude->sendQueuedEvents();
+        });
+
+        $eventDispatcher->listen([RequestHandled::class, CommandFinished::class], function() {
+            event(new SendQueuedEvents());
         });
     }
 }
