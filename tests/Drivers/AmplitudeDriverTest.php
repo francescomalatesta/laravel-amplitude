@@ -17,7 +17,7 @@ class AmplitudeDriverTest extends TestCase
     /** @var AmplitudeDriver */
     private $driver;
 
-    public function setUp()
+    public function setUp() : void
     {
         $this->amplitude = $this->getMockBuilder(Amplitude::class)->disableOriginalConstructor()->getMock();
         $this->driver = new AmplitudeDriver($this->amplitude);

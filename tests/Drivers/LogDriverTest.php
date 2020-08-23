@@ -15,7 +15,7 @@ class LogDriverTest extends TestCase
 
     private $driver;
 
-    public function setUp()
+    public function setUp() : void
     {
         $this->logger = $this->getMockBuilder(LogManager::class)->disableOriginalConstructor()->getMock();
         $this->driver = new LogDriver($this->logger);
