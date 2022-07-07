@@ -40,7 +40,7 @@ class LaravelAmplitudeServiceProvider extends ServiceProvider
                 $this->app->make(NullDriver::class)
             ]);
 
-            return $factory->makeFor(config('amplitude.driver'));
+            return $factory->makeFor(config('amplitude.driver', 'amplitude'));
         });
 
         /** @var Dispatcher $eventDispatcher */
