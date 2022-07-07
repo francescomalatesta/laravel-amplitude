@@ -1,6 +1,6 @@
 # A Laravel package to work with Amplitude.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/francescomalatesta/laravel-amplitude.svg?style=flat-square)](https://packagist.org/packages/francescomalatesta/laravel-amplitude)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/hashcode7/laravel-amplitude-analytics.svg?style=flat-square)](https://packagist.org/packages/francescomalatesta/laravel-amplitude)
 [![Build Status](https://img.shields.io/travis/francescomalatesta/laravel-amplitude/master.svg?style=flat-square)](https://travis-ci.org/francescomalatesta/laravel-amplitude)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/francescomalatesta/laravel-amplitude/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/francescomalatesta/laravel-amplitude/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/francescomalatesta/laravel-amplitude.svg?style=flat-square)](https://packagist.org/packages/francescomalatesta/laravel-amplitude)
@@ -16,7 +16,8 @@ This package is compatible with the 5.8 version of Laravel.
 You can install the package via composer:
 
 ```bash
-composer require francescomalatesta/laravel-amplitude
+composer require hashcode7/laravel-amplitude-analytics
+
 ```
 
 Do not forget to publish the config file with Artisan:

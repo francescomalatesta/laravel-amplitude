@@ -1,5 +1,5 @@
 {
-    "name": "francescomalatesta/laravel-amplitude",
+    "name": "hashcode7/laravel-amplitude-analytics",
     "description": "A Laravel package to work with Amplitude.",
     "keywords": [
         "laravel",
@@ -7,19 +7,19 @@
         "package",
         "php"
     ],
-    "homepage": "https://github.com/francescomalatesta/laravel-amplitude",
+    "homepage": "https://github.com/hashcode7/laravel-amplitude-analytics",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Francesco Malatesta",
-            "email": "hellofrancesco@gmail.com",
+            "name": "Nanda Yemparala",
+            "email": "nanda.yemparala@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.4",
-        "illuminate/support": "^6.0|^7.0|^8.0",
+        "php": "^7.4|^8.0.2",
+        "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
         "zumba/amplitude-php": "^1.0"
     },
     "require-dev": {
