@@ -18,8 +18,8 @@
         }
     ],
     "require": {
-        "php": "^7.4",
-        "illuminate/support": "^6.0|^7.0|^8.0",
+        "php": "^7.4|^8.0.2",
+        "illuminate/support": "^6.0|^7.0|^8.0|^9.0",
         "zumba/amplitude-php": "^1.0"
     },
     "require-dev": {
